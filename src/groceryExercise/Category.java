@@ -2,21 +2,23 @@ package groceryExercise;
 import util.Input;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class Category {
-    private ArrayList<String> category;
-    String name;
+    protected ArrayList<String> categories;
+    protected String categoryName;
 
     public Category(String name) {
-        this.name = name;
+        this.categories = new ArrayList<>();
     }
 
-
-
-    public void groceryItems() {
-         new ArrayList<>();
+    public String getCategoryName() {
+        return categoryName;
     }
+
+    public void addCategory(String category) {
+        categories.add(category);
+    }
+
 
 }
 
