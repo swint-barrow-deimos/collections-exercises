@@ -9,12 +9,14 @@ public class GroceryListApplication {
         String userInput;
         String categoryInput;
         String itemInput;
+        String exitShopping;
         int quantityInput;
-        ArrayList<Object> listOfItems = new ArrayList<>();
+        ArrayList<ListItems> listOfItems = new ArrayList<>();
 
         System.out.println("Do you want to make a list? [y/n]");
         Input input = new Input();
         userInput = input.getString();
+        do {
         if (userInput.equalsIgnoreCase("y")) {
             System.out.println("Please choose a category...\n" +
                     "Veggies\n" +
@@ -22,19 +24,37 @@ public class GroceryListApplication {
                     "Dairy\n" +
                     "Frozen");
             input = new Input();
-            categoryInput = input.getString();
+            categoryInput = input.getString().toLowerCase();
             System.out.println("Please enter a food item for this category...");
             input = new Input();
-            itemInput = input.getString();
+            itemInput = input.getString().toLowerCase();
             System.out.println("Please enter quantity desired...");
             input = new Input();
             quantityInput = input.getInt();
 
-            ListItems item1 = new ListItems(categoryInput, itemInput, quantityInput);
+            ListItems item = new ListItems(categoryInput, itemInput, quantityInput);
+            listOfItems.add(item);
+
+            System.out.println("Would you like to see your shopping card? [y/n]");
+            input = new Input();
+            exitShopping = input.getString().toLowerCase();
+
+            if (exitShopping.equalsIgnoreCase("y"))
+            for (ListItems itemOnList : listOfItems) {
+                System.out.printf("Category: %s | Item: %s | Quantity: %s %n", itemOnList.getCategoryName(), itemOnList.getName(), itemOnList.getAmount());
+            }
+
+            System.out.println("Would you like to add another item? [y/n]");
+            input = new Input();
+            userInput = input.getString();
 
         } else {
             System.out.println("Thanks");
         }
+        } while (!userInput.equalsIgnoreCase("n"));
+        System.out.println("Thanks");
+
+
 
     }
 }
