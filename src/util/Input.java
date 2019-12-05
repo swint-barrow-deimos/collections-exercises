@@ -32,7 +32,6 @@ public class Input {
     }
 
     public int getInt() {
-        System.out.println("Please enter a number between 0 and 6");
         int newInput = sc.nextInt();
 //        System.out.println(newInput);
         return newInput;

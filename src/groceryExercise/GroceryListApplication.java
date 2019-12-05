@@ -1,43 +1,40 @@
 package groceryExercise;
 import util.Input;
-import java.util.HashMap;
+import java.util.ArrayList;
+
 
 public class GroceryListApplication {
 
     public static void main(String[] args) {
-        String userInput1;
-        int userInput2;
+        String userInput;
+        String categoryInput;
+        String itemInput;
+        int quantityInput;
+        ArrayList<Object> listOfItems = new ArrayList<>();
 
-        Category choice = new Category("choice");
-        choice.addCategory("Veggies");
-        choice.addCategory("Meat");
-        choice.addCategory("Bread");
-        choice.addCategory("Frozen");
-
-
-        HashMap<String, Integer> veggieItems = new HashMap<>();
-        HashMap<String, Integer> meatItems = new HashMap<>();
-        HashMap<String, Integer> breadItems = new HashMap<>();
-        HashMap<String, Integer> frozenItems = new HashMap<>();
-
-
-
-
-        System.out.println("Would you like to create a grocery list?");
+        System.out.println("Do you want to make a list? [y/n]");
         Input input = new Input();
-        userInput1 = input.toString();
-//        if (userInput1.equalsIgnoreCase("yes")) {
-//            do {
-                System.out.println("Please choose a category: ");
-                System.out.println(choice.categories.toString());
-                input = new Input();
-                userInput1 = input.getString();
-                System.out.println(userInput1);
+        userInput = input.getString();
+        if (userInput.equalsIgnoreCase("y")) {
+            System.out.println("Please choose a category...\n" +
+                    "Veggies\n" +
+                    "Meat\n" +
+                    "Dairy\n" +
+                    "Frozen");
+            input = new Input();
+            categoryInput = input.getString();
+            System.out.println("Please enter a food item for this category...");
+            input = new Input();
+            itemInput = input.getString();
+            System.out.println("Please enter quantity desired...");
+            input = new Input();
+            quantityInput = input.getInt();
 
+            ListItems item1 = new ListItems(categoryInput, itemInput, quantityInput);
 
-//            } while (true);
-//        } else {
-//            System.out.println("Thank you for shopping.");
-//        }
+        } else {
+            System.out.println("Thanks");
+        }
+
     }
 }
