@@ -3,7 +3,7 @@ import util.Input;
 import java.util.ArrayList;
 
 
-public class GroceryListApplication {
+public class GroceryListApplication{
 
     public static void main(String[] args) {
         String userInput;
@@ -32,7 +32,7 @@ public class GroceryListApplication {
             input = new Input();
             quantityInput = input.getInt();
 
-            ListItems item = new ListItems(categoryInput, itemInput, quantityInput);
+            ListItems item = new ListItems(itemInput, categoryInput, quantityInput);
             listOfItems.add(item);
 
             System.out.println("Would you like to see your shopping card? [y/n]");
@@ -55,6 +55,6 @@ public class GroceryListApplication {
         System.out.println("Thanks");
 
 
-
     }
+
 }

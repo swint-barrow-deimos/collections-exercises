@@ -9,7 +9,7 @@ public class ListItems {
     private int amount;
 
 
-    public ListItems(String category, String name, int quantity) {
+    public ListItems(String name, String category, int quantity) {
             this.itemName = name;
             this.categoryName = category;
             this.amount = quantity;
