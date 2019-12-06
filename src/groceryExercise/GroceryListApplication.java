@@ -29,6 +29,22 @@ public class GroceryListApplication {
                         "Other");
                 input = new Input();
                 categoryInput = input.getString().toLowerCase();
+//                if (!categoryInput.equalsIgnoreCase("veggies")) {
+//                    System.out.println("That category doesn't exist, please try again...");
+//                    continue;
+//                } else if (!categoryInput.equalsIgnoreCase("meat")) {
+//                    System.out.println("That category doesn't exist, please try again...");
+//                    continue;
+//                } else if (!categoryInput.equalsIgnoreCase("dairy")) {
+//                    System.out.println("That category doesn't exist, please try again...");
+//                    continue;
+//                } else if (!categoryInput.equalsIgnoreCase("frozen") {
+//                    System.out.println("That category doesn't exist, please try again...");
+//                    continue;
+//                } else if (!categoryInput.equalsIgnoreCase("other")) {
+//                    System.out.println("That category doesn't exist, please try again...");
+//                    continue;
+//                }
                 System.out.println("Please enter a food item for this category...");
                 input = new Input();
                 itemInput = input.getString().toLowerCase();
