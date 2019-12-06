@@ -25,7 +25,8 @@ public class GroceryListApplication {
                         "Veggies\n" +
                         "Meat\n" +
                         "Dairy\n" +
-                        "Frozen");
+                        "Frozen\n" +
+                        "Other");
                 input = new Input();
                 categoryInput = input.getString().toLowerCase();
                 System.out.println("Please enter a food item for this category...");
@@ -57,11 +58,36 @@ public class GroceryListApplication {
         } while (!userInput.equalsIgnoreCase("n"));
         System.out.println("Thanks");
         Collections.sort(listOfItems);
-        for (ListItems itemOnList : listOfItems) {
-            System.out.printf("Category: %s | Item: %s | Quantity: %s %n", itemOnList.getCategoryName(), itemOnList.getName(), itemOnList.getAmount());
+
+        for (ListItems item : listOfItems) {
+            if (item.getCategoryName().equalsIgnoreCase("veggies")) {
+                System.out.printf("Category: %s | Item: %s | Quantity: %s %n", item.getCategoryName(), item.getName(), item.getAmount());
+            }
         }
-        //sort works, now just print out in categories
-        //fix delimeter
+
+        for (ListItems item : listOfItems) {
+            if (item.getCategoryName().equalsIgnoreCase("meat")) {
+                System.out.printf("Category: %s | Item: %s | Quantity: %s %n", item.getCategoryName(), item.getName(), item.getAmount());            }
+        }
+
+        for (ListItems item : listOfItems) {
+            if (item.getCategoryName().equalsIgnoreCase("Dairy")) {
+                System.out.printf("Category: %s | Item: %s | Quantity: %s %n", item.getCategoryName(), item.getName(), item.getAmount());            }
+        }
+        for (ListItems item : listOfItems) {
+            if (item.getCategoryName().equalsIgnoreCase("frozen")) {
+                System.out.printf("Category: %s | Item: %s | Quantity: %s %n", item.getCategoryName(), item.getName(), item.getAmount());            }
+        }
+        for (ListItems item : listOfItems) {
+            if (item.getCategoryName().equalsIgnoreCase("other")) {
+                System.out.printf("Category: %s | Item: %s | Quantity: %s %n", item.getCategoryName(), item.getName(), item.getAmount());            }
+        }
+
+
+
+//        for (ListItems itemOnList : listOfItems) {
+//            System.out.printf("Category: %s | Item: %s | Quantity: %s %n", itemOnList.getCategoryName(), itemOnList.getName(), itemOnList.getAmount());
+//        }
 
     }
 
