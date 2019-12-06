@@ -3,7 +3,7 @@ import util.Input;
 
 import java.util.ArrayList;
 
-public class ListItems {
+public class ListItems implements Comparable<ListItems>{
     private String itemName;
     private String categoryName;
     private int amount;
@@ -27,6 +27,11 @@ public class ListItems {
         return amount;
     }
 
+    @Override
+    public int compareTo(ListItems o) {
+        int compare = itemName.compareTo(o.itemName);
+        return compare;
+    }
 }
 
 //END GOAL: A BUNCH OF OBJECTS THAT DISPLAY THE NAME OF OBJECT AND THE QUANTITY
