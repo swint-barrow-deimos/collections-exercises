@@ -32,6 +32,7 @@ public class ListItems implements Comparable<ListItems>{
         int compare = itemName.compareTo(o.itemName);
         return compare;
     }
+
 }
 
 //END GOAL: A BUNCH OF OBJECTS THAT DISPLAY THE NAME OF OBJECT AND THE QUANTITY

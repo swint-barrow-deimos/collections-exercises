@@ -61,6 +61,7 @@ public class GroceryListApplication {
             System.out.printf("Category: %s | Item: %s | Quantity: %s %n", itemOnList.getCategoryName(), itemOnList.getName(), itemOnList.getAmount());
         }
         //sort works, now just print out in categories
+        //fix delimeter
 
     }
 
