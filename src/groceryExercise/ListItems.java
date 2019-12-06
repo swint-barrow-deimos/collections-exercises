@@ -36,7 +36,7 @@ public class ListItems implements Comparable<ListItems>{
 }
 
 //END GOAL: A BUNCH OF OBJECTS THAT DISPLAY THE NAME OF OBJECT AND THE QUANTITY
-//
+
 
 
 
